@@ -19,3 +19,31 @@ body{
     justify-content: space-between;
 
 }
+
+#logo{
+    width: 100%;
+    
+}
+
+#logo img{
+    width: 50%;
+    display: block;
+    justify-content: center;
+}
+
+.menu-image img{
+    width: 100%;
+    height: 25%;
+}
+
+.restaurant__img{
+    width: 100%;
+    height: 25%;
+}
+
+
+.price{
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+}
