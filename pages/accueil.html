@@ -14,19 +14,17 @@
 <body>
     
     <header>
-        <div #logo>
-            <img src="../ressources/images/logo/ohmyfood.png" alt="logo">
+        <div id="logo">
+            <img class=logo-img src="../ressources/images/logo/ohmyfood.png" alt="logo">
         </div>
     </header>
     
     <main>
+        <div class="localisation">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Paris, Belleville</span>
+        </div>
         <section class="reservation">
-            <form method="post" action="traitement.php">
-                <div class="reservation__search">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" name="rechercher" id="rechercher" placeholder="Paris, Belleville">
-                </div>
-            </form>
             <div class="reservation__text">
                 <h1>Réservez le menu qui vous convient</h1>
                 <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>

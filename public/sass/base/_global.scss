@@ -17,19 +17,52 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-}
-
-#logo{
-    width: 100%;
     
 }
 
-#logo img{
-    width: 50%;
-    display: block;
+header{
+    padding: 20px 0 20px 0;
+    box-shadow: 5px 5px 5px grey;
+}
+
+
+.reservation__text{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
+
+h1, h2{
+    font-size: 16px;
+    width: 60%;
+}
+
+
+
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img{
+    width: 50%;
+    
+}
+
+.localisation{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    background-color: rgba(228, 218, 218, 0.774);
+    padding: 10px 0 10px 0;
+    
+    
+    span{ 
+        padding-left: 20px;
+    }  
+}
+
+
 
 .menu-image img{
     width: 100%;

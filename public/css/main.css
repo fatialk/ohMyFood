@@ -30,16 +30,57 @@ body {
           justify-content: space-between;
 }
 
-#logo {
-  width: 100%;
+header {
+  padding: 20px 0 20px 0;
+  -webkit-box-shadow: 5px 5px 5px grey;
+          box-shadow: 5px 5px 5px grey;
 }
 
-#logo img {
-  width: 50%;
-  display: block;
+.reservation__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+h1, h2 {
+  font-size: 16px;
+  width: 60%;
+}
+
+#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo-img {
+  width: 50%;
+}
+
+.localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  background-color: rgba(228, 218, 218, 0.774);
+  padding: 10px 0 10px 0;
+}
+
+.localisation span {
+  padding-left: 20px;
 }
 
 .menu-image img {
