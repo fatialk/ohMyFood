@@ -1,0 +1,10 @@
+ .menu-image img{
+    width: 100%;
+    height: 25%;
+}
+
+.price{
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+}
