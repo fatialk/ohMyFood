@@ -140,6 +140,7 @@ header .logo__img {
 
 .restaurants {
   height: 1120px;
+  background-color: #f6f6f6;
 }
 
 .restaurants > h1 {
@@ -148,12 +149,13 @@ header .logo__img {
 
 .restaurants .restaurant {
   width: 90%;
-  height: 20%;
+  height: 22%;
   margin: auto;
   margin-bottom: 20px;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #ebebeb;
           box-shadow: 5px 5px 5px #ebebeb;
+  background-color: white;
 }
 
 .restaurants .restaurant__img {
@@ -174,11 +176,25 @@ header .logo__img {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-left: 20px;
+  padding: 0 20px 0 20px;
   font-size: 16px;
 }
 
 .restaurants .restaurant span:nth-child(1) {
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurants .restaurant span:nth-child(1) .fa-heart {
+  font-size: x-large;
 }
 /*# sourceMappingURL=main.css.map */
