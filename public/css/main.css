@@ -141,6 +141,7 @@ header .logo__img {
 .restaurants {
   height: 1120px;
   background-color: #f6f6f6;
+  padding-bottom: 50px;
 }
 
 .restaurants > h1 {
@@ -153,8 +154,8 @@ header .logo__img {
   margin: auto;
   margin-bottom: 20px;
   border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 5px #ebebeb;
-          box-shadow: 5px 5px 5px #ebebeb;
+  -webkit-box-shadow: 5px 5px 5px rgba(228, 218, 218, 0.774);
+          box-shadow: 5px 5px 5px rgba(228, 218, 218, 0.774);
   background-color: white;
 }
 
@@ -196,5 +197,26 @@ header .logo__img {
 
 .restaurants .restaurant span:nth-child(1) .fa-heart {
   font-size: x-large;
+}
+
+footer {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 20px;
+  color: white;
+  background-color: black;
+}
+
+footer .logo-footer__img {
+  width: 30%;
 }
 /*# sourceMappingURL=main.css.map */
