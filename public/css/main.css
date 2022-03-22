@@ -11,6 +11,51 @@ a {
   text-decoration: none;
 }
 
+/*.custom-loading-spinner {
+    z-index: 9999999999;
+    overflow: hidden;
+    cursor: progress;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-fill-mode:forwards;
+    pointer-events: none;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+        background: #0b0b0b;
+        opacity: 0.6;
+    }
+    &::after {
+        box-sizing: border-box;
+        z-index: 1;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: custom-loading 3s linear;
+        display: block;
+        
+    }
+    @keyframes custom-loading {
+        0% { transform: rotate(0deg);}
+        100% { transform: rotate(360deg); }
+        
+        
+    }
+    
+} */
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -55,6 +100,20 @@ header .logo__img {
   margin: 20px auto;
   padding: 20px;
   width: 52%;
+}
+
+.fa-heart {
+  font-size: x-large;
+  position: absolute;
+  right: 10%;
+}
+
+.fa-heart:hover {
+  font-weight: 900;
+  background: -webkit-gradient(linear, center top, center bottom, from(#FF79DA), to(#9356DC));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .localisation {
@@ -113,13 +172,13 @@ header .logo__img {
   border: none;
   border-radius: 15px;
   margin: 20px auto;
-  padding: 20px 20px 20px 0;
+  padding: 20px 0 20px 0;
   width: 85%;
   -webkit-box-shadow: 5px 5px 5px #ebebeb;
           box-shadow: 5px 5px 5px #ebebeb;
 }
 
-.fonctionnement__btn > i {
+.fonctionnement__btn i:nth-child(1) {
   border-radius: 50%;
   padding: 7px 9px;
   background-color: #9356DC;
@@ -129,16 +188,13 @@ header .logo__img {
   font-size: small;
 }
 
+.fonctionnement__btn i:nth-child(2) {
+  margin: 0 20px 0 10px;
+  color: grey;
+}
+
 .fonctionnement__btn span {
   font-size: 16px;
-}
-
-.fonctionnement__btn span i {
-  margin: 0 20px;
-}
-
-.fonctionnement__btn span .fa-store {
-  color: #9356DC;
 }
 
 .restaurants {
@@ -196,20 +252,6 @@ header .logo__img {
           justify-content: space-between;
 }
 
-.restaurants .restaurant .fa-heart {
-  font-size: x-large;
-  position: absolute;
-  right: 10%;
-}
-
-.restaurants .restaurant .fa-heart:hover {
-  font-weight: 900;
-  background: -webkit-gradient(linear, center top, center bottom, from(#FF79DA), to(#9356DC));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .restaurants .nouveau {
   z-index: 1;
   position: absolute;
@@ -259,7 +301,7 @@ header i {
 
 .menu-image img {
   width: 100%;
-  height: 25%;
+  height: 283px;
 }
 
 main {
