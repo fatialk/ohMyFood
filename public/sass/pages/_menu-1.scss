@@ -61,7 +61,7 @@ main{
         width: 90%;
         background-color: white;
         box-shadow: 5px 5px 5px #ebebeb;
-        
+        animation: showMenu 3s ease-in-out forwards;
         .title-3{
             font-weight: bold;
             padding-bottom: 5px;

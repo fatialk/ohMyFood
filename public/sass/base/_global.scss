@@ -8,51 +8,28 @@ a{
     text-decoration: none;
 }
 
-/*.custom-loading-spinner {
-    z-index: 9999999999;
-    overflow: hidden;
-    cursor: progress;
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    animation-fill-mode:forwards;
-    pointer-events: none;
-    
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        overflow: hidden;
-        background: #0b0b0b;
-        opacity: 0.6;
-    }
-    &::after {
-        box-sizing: border-box;
-        z-index: 1;
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -25px 0 0 -25px;
-        border: 3px solid #f3f3f3;
-        border-top: 3px solid #3498db;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: custom-loading 3s linear;
-        display: block;
-        
-    }
-    @keyframes custom-loading {
-        0% { transform: rotate(0deg);}
-        100% { transform: rotate(360deg); }
-        
-        
-    }
-    
-} */
+    top: 330px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid red;
+    border-color: red transparent red transparent;
+    animation: lds-dual-ring 3s linear forwards;
+}
 
 body{
     box-sizing: border-box;
@@ -68,11 +45,14 @@ body{
 
 header{
     padding: 20px 0 20px 0;
+    &.home{
+        animation: backgroundAll 3s linear forwards;
+    }
     
     .logo{
         display: flex;
         justify-content: center;
-
+        
         
         
         &__img{
@@ -80,7 +60,11 @@ header{
         }
     }
 }
-
+main{ 
+    &.home{
+        animation: backgroundAll 3s linear forwards;
+    }
+}
 
 .book-order-btn{
     background: linear-gradient($color-secondary, $color-primary);
@@ -91,19 +75,41 @@ header{
     margin: 20px auto;
     padding: 20px;
     width: 52%;
+    box-shadow: 5px 5px 5px #c9c9c9;
+    &:hover{
+        filter: brightness(1.25);
+        
+    }
+
+    @media screen and (min-width: $tablet-limit) { 
+        width: 30%;
+    }
+    @media screen and (min-width: $desktop-limit) { 
+        width: 25%;
+    }
 }
 
 .fa-heart{
     font-size: x-large;
-    position:absolute;
-    right:10%;
+    position: absolute;
+    margin-left: 74%;
     &:hover{
         font-weight: 900;
         background: -webkit-gradient(linear, center top, center bottom, from($color-secondary), to($color-primary));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: paintHeart 1s linear forwards;
     }
+
+    @media screen and (min-width: $tablet-limit) { 
+        margin-left: 32%;
+    }
+    @media screen and (min-width: $desktop-limit) { 
+        margin-left: 33%;
+    }
+
+    
 }
 
 
@@ -143,15 +149,13 @@ header{
         font-weight: 500;
         margin: 20px auto;
         width: 80%;
-        
     }
-    
-    
 }
 
 .fonctionnement{
     padding-bottom: 40px;
     background-color: white;
+    
     
     h1{
         padding: 20px 0 20px 20px;
@@ -166,6 +170,11 @@ header{
         padding: 20px 0 20px 0;
         width: 85%;
         box-shadow: 5px 5px 5px #ebebeb;
+        @media screen and (min-width: $tablet-limit) { 
+            text-align: center;
+            width: 25%;
+            padding-top: 0;
+        }
         
         
         i:nth-child(1){
@@ -176,27 +185,66 @@ header{
             position: relative;
             right: 10px;
             font-size: small;
+            @media screen and (min-width: $tablet-limit) { 
+                position: relative;
+                bottom: 13px;
+                display: table;
+            }
         }
         
         i:nth-child(2){
             margin: 0 20px 0 10px;
             color: grey;
-            
+            @media screen and (min-width: $tablet-limit) { 
+                margin-bottom: 10px;
+            }
         }
         
         span{
             font-size: 16px;
+            @media screen and (min-width: $desktop-limit) { 
+                display: unset;
+            }
+            
+            @media screen and (min-width: $tablet-limit) and (max-width: $desktop-limit) { 
+                display: block;
+            } 
         }
-
-        
-        
     }
+    
+    > div{
+        @media screen and (min-width: $tablet-limit) { 
+            display: flex;
+            flex-direction: row;
+        }
+    }     
 }
 
 .restaurants{
     height: 1120px;
     background-color: #f6f6f6;
     padding-bottom: 50px;
+    @media screen and (min-width: $tablet-limit) { 
+        height: 820px;
+    }
+    
+    > div{
+        width: 100%;
+        height: 100%;
+        > a{
+            @media screen and (min-width: $tablet-limit) {
+                width: 40%;
+            }
+        }
+        
+        @media screen and (min-width: $tablet-limit) { 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: 90%;
+        }
+    }
     
     >h1{
         padding: 20px 0 0 20px;
@@ -211,6 +259,20 @@ header{
         border-radius: 20px;
         box-shadow: 5px 5px 5px #e4dadac5;;
         background-color: white;
+
+        
+        
+        @media screen and (min-width: $desktop-limit) {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 0;
+        }
+        
+        @media screen and (min-width: $tablet-limit) {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 0;
+        }
         
         &__img{
             width: 100%;
@@ -243,11 +305,23 @@ header{
     .nouveau{
         z-index: 1;
         position: absolute;
-        right: 10%;
+        margin-left: 65%;
         margin-top: 5%;
         color: #008563;
         background-color: #98e2cf;;
         padding: 5px 10px;
+
+        @media screen and (min-width: $tablet-limit) { 
+            margin-left: 28%;
+            margin-top: 3%;
+        
+        }
+        @media screen and (min-width: $desktop-limit) { 
+            margin-left: 31%;
+            margin-top: 2%;
+        }
+
+        
     }  
 }
 
