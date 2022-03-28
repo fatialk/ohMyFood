@@ -115,11 +115,75 @@
   }
 }
 
-header i {
+.header-restaurant {
+  padding: 20px 0 20px 0;
+}
+
+@media screen and (min-width: 426px) {
+  .header-restaurant {
+    padding: 0;
+  }
+}
+
+.header-restaurant .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 426px) {
+  .header-restaurant .logo {
+    display: block;
+    padding: 30px;
+  }
+}
+
+.header-restaurant .logo__img {
+  width: 40%;
+}
+
+@media screen and (min-width: 426px) {
+  .header-restaurant .logo__img {
+    width: 200px;
+    height: 30px;
+    margin-left: 50px;
+  }
+}
+
+.header-restaurant i:nth-child(1) {
   padding-left: 20px;
   position: absolute;
   top: 25px;
   font-size: large;
+}
+
+@media screen and (min-width: 426px) {
+  .header-restaurant i:nth-child(1) {
+    display: none;
+  }
+}
+
+.header-restaurant i:nth-child(2) {
+  display: none;
+}
+
+@media screen and (min-width: 426px) {
+  .header-restaurant i:nth-child(2) {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: x-large;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .menu-image {
+    background-color: #423d3d14;
+  }
 }
 
 .menu-image img {
@@ -131,11 +195,9 @@ header i {
   .menu-image img {
     display: BLOCK;
     width: 50%;
+    height: 300px;
     margin: 0 auto;
-    border: solid;
     border-bottom: none;
-    border-radius: 35px 35px 0 0;
-    border-color: #99E2D0;
   }
 }
 
@@ -143,23 +205,18 @@ main {
   background-color: #f5f5f5;
 }
 
-@media screen and (min-width: 426px) {
-  main {
-    background-color: white;
-  }
-}
-
 .carte {
   border-radius: 35px 35px 0 0;
   padding: 20px 0 40px 0;
   background-color: #f5f5f5;
+  position: relative;
+  bottom: 45px;
 }
 
 @media screen and (min-width: 426px) {
   .carte {
     border-radius: 0;
     padding-top: 0;
-    background-color: white;
   }
 }
 
@@ -180,10 +237,11 @@ main {
     width: 50%;
     margin: auto;
     padding: 20px 20px 20px 20px;
-    border: solid;
     border-top: none;
     border-radius: 0 0 35px 35px;
-    border-color: #99E2D0;
+    -webkit-box-shadow: 5px 5px 5px #ebebeb;
+            box-shadow: 5px 5px 5px #ebebeb;
+    background-color: white;
   }
 }
 
