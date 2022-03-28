@@ -9,7 +9,7 @@ a{
 }
 
 
-.lds-dual-ring {
+.loader-accueil {
     display: inline-block;
     width: 80px;
     height: 80px;
@@ -19,7 +19,7 @@ a{
     right: 0;
     margin: auto;
 }
-.lds-dual-ring:after {
+.loader-accueil:after {
     content: " ";
     display: block;
     width: 64px;
@@ -28,7 +28,7 @@ a{
     border-radius: 50%;
     border: 6px solid red;
     border-color: red transparent red transparent;
-    animation: lds-dual-ring 3s linear forwards;
+    animation: loader-accueil 3s linear forwards;
 }
 
 body{

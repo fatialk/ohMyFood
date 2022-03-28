@@ -1,9 +1,9 @@
-@keyframes custom-loading {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg); }
-}
+// @keyframes custom-loading {
+//     0% { transform: rotate(0deg);}
+//     100% { transform: rotate(360deg); }
+// }
 
-@keyframes lds-dual-ring {
+@keyframes loader-accueil {
     0% {
       transform: rotate(0deg);
     }
@@ -45,4 +45,28 @@
     100% {
       opacity: 1;
     }
+  }
+
+  @keyframes check {
+    0%{
+      padding: 16px;
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      padding: 16px;
+      width: auto;
+      opacity: 1;
+    }
+    
+  }
+
+  @keyframes rotateCheck {
+    0%{
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+    
   }

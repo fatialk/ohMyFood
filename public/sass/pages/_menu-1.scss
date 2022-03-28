@@ -61,7 +61,7 @@
             height: 300px;
             margin: 0 auto;
             border-bottom: none;
-
+            
             
         }
     }
@@ -175,35 +175,69 @@ main{
             background-color: white;
             box-shadow: 5px 5px 5px #ebebeb;
             animation: showMenu 3s ease-in-out forwards;
+            align-items: center;
+            
+            &:hover > div.check{
+                animation: check .5s linear forwards;  
+            }
+            
+            
             
             @media screen and (min-width: $tablet-limit) { 
                 width: 100%;
                 height: 25%;
-                
-            }
-            
-            
-            .title-3{
-                font-weight: bold;
-                padding-bottom: 5px;
-            }
-            
-            .title-4{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                padding: 0;
                 
-                .price{
+            }
+            
+            .titles{
+                width: 100%;
+                padding: 20px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                
+                .title-3{
                     font-weight: bold;
+                    padding-bottom: 5px;
                 }
-            }   
+                
+                .title-4{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    
+                    .price{
+                        font-weight: bold;
+                        
+                    }
+                }
+            }
+            
+            .check{
+                padding: 0px;
+                opacity: 0;
+                width: 0;
+                border-radius: 0 15px 15px 0;
+                background-color: #99e2d0;
+                color: white;    
+                }
+            }
+
+            i{
+                font-size: large;
+                animation: rotateCheck 1s linear infinite;
+            }
         }   
-    }   
-    
-    .book-order-btn{
-        @media screen and (min-width: $tablet-limit) { 
-            margin-top: 30px;
-        }
         
+        .book-order-btn{
+            @media screen and (min-width: $tablet-limit) { 
+                margin-top: 30px;
+            }
+            
+        }
     }
-}

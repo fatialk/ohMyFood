@@ -1,27 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@-webkit-keyframes custom-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes custom-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes lds-dual-ring {
+@-webkit-keyframes loader-accueil {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -35,8 +14,7 @@
     opacity: 0;
   }
 }
-
-@keyframes lds-dual-ring {
+@keyframes loader-accueil {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -112,6 +90,54 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes check {
+  0% {
+    padding: 16px;
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    padding: 16px;
+    width: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes check {
+  0% {
+    padding: 16px;
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    padding: 16px;
+    width: auto;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotateCheck {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotateCheck {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
@@ -320,21 +346,56 @@ main {
           box-shadow: 5px 5px 5px #ebebeb;
   -webkit-animation: showMenu 3s ease-in-out forwards;
           animation: showMenu 3s ease-in-out forwards;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carte > div .carte__btn:hover > div.check {
+  -webkit-animation: check .5s linear forwards;
+          animation: check .5s linear forwards;
 }
 
 @media screen and (min-width: 426px) {
   .carte > div .carte__btn {
     width: 100%;
     height: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
   }
 }
 
-.carte > div .carte__btn .title-3 {
+.carte > div .carte__btn .titles {
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.carte > div .carte__btn .titles .title-3 {
   font-weight: bold;
   padding-bottom: 5px;
 }
 
-.carte > div .carte__btn .title-4 {
+.carte > div .carte__btn .titles .title-4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,8 +408,23 @@ main {
           justify-content: space-between;
 }
 
-.carte > div .carte__btn .title-4 .price {
+.carte > div .carte__btn .titles .title-4 .price {
   font-weight: bold;
+}
+
+.carte > div .carte__btn .check {
+  padding: 0px;
+  opacity: 0;
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+  color: white;
+}
+
+.carte > div i {
+  font-size: large;
+  -webkit-animation: rotateCheck 1s linear infinite;
+          animation: rotateCheck 1s linear infinite;
 }
 
 @media screen and (min-width: 426px) {
@@ -368,7 +444,7 @@ a {
   text-decoration: none;
 }
 
-.lds-dual-ring {
+.loader-accueil {
   display: inline-block;
   width: 80px;
   height: 80px;
@@ -379,7 +455,7 @@ a {
   margin: auto;
 }
 
-.lds-dual-ring:after {
+.loader-accueil:after {
   content: " ";
   display: block;
   width: 64px;
@@ -388,8 +464,8 @@ a {
   border-radius: 50%;
   border: 6px solid red;
   border-color: red transparent red transparent;
-  -webkit-animation: lds-dual-ring 3s linear forwards;
-          animation: lds-dual-ring 3s linear forwards;
+  -webkit-animation: loader-accueil 3s linear forwards;
+          animation: loader-accueil 3s linear forwards;
 }
 
 body {
