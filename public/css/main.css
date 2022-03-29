@@ -95,26 +95,22 @@
 
 @-webkit-keyframes check {
   0% {
-    padding: 16px;
     width: 0;
     opacity: 0;
   }
   100% {
-    padding: 16px;
-    width: auto;
+    width: 20%;
     opacity: 1;
   }
 }
 
 @keyframes check {
   0% {
-    padding: 16px;
     width: 0;
     opacity: 0;
   }
   100% {
-    padding: 16px;
-    width: auto;
+    width: 20%;
     opacity: 1;
   }
 }
@@ -295,6 +291,10 @@ main {
   }
 }
 
+.carte > div > div {
+  width: 100%;
+}
+
 @media screen and (min-width: 426px) {
   .carte > div > div {
     width: 30%;
@@ -330,25 +330,27 @@ main {
 }
 
 .carte > div .carte__btn {
+  width: 100%;
+  height: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-radius: 15px;
   margin: 20px auto;
-  padding: 10px 20px 10px 10px;
+  padding: 0;
   width: 90%;
   background-color: white;
   -webkit-box-shadow: 5px 5px 5px #ebebeb;
           box-shadow: 5px 5px 5px #ebebeb;
   -webkit-animation: showMenu 3s ease-in-out forwards;
           animation: showMenu 3s ease-in-out forwards;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .carte > div .carte__btn:hover > div.check {
@@ -356,27 +358,34 @@ main {
           animation: check .5s linear forwards;
 }
 
+.carte > div .carte__btn:hover > div.check > i {
+  -webkit-animation: rotateCheck 1s linear forwards;
+          animation: rotateCheck 1s linear forwards;
+}
+
+.carte > div .carte__btn:hover > .titles {
+  width: 60%;
+}
+
+.carte > div .carte__btn:hover > .titles > .title-3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media screen and (min-width: 426px) {
   .carte > div .carte__btn {
     width: 100%;
     height: 25%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .carte > div .carte__btn .titles {
-  width: 100%;
-  padding: 20px;
+  width: 80%;
+  padding: 10px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +397,7 @@ main {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  white-space: nowrap;
 }
 
 .carte > div .carte__btn .titles .title-3 {
@@ -395,36 +405,60 @@ main {
   padding-bottom: 5px;
 }
 
-.carte > div .carte__btn .titles .title-4 {
+.carte > div .carte__btn .titles .overflow-clip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carte > div .carte__btn .price {
+  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
-.carte > div .carte__btn .titles .title-4 .price {
-  font-weight: bold;
+@media screen and (min-width: 426px) {
+  .carte > div .carte__btn .price {
+    display: table;
+    height: 100%;
+  }
+}
+
+.carte > div .carte__btn .price > span {
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 426px) {
+  .carte > div .carte__btn .price > span {
+    vertical-align: bottom;
+    display: table-cell;
+    padding-bottom: 15px;
+  }
 }
 
 .carte > div .carte__btn .check {
-  padding: 0px;
+  width: 0%;
   opacity: 0;
-  width: 0;
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
   color: white;
+  text-align: center;
+  display: table;
+}
+
+@media screen and (min-width: 426px) {
+  .carte > div .carte__btn .check {
+    height: 100%;
+  }
 }
 
 .carte > div i {
-  font-size: large;
-  -webkit-animation: rotateCheck 1s linear infinite;
-          animation: rotateCheck 1s linear infinite;
+  font-size: x-large;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 426px) {

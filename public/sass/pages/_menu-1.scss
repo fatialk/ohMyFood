@@ -129,6 +129,8 @@ main{
         }
         
         > div{
+            
+            width: 100%;
             @media screen and (min-width: $tablet-limit) { 
                 width: 30%;
             }
@@ -166,19 +168,38 @@ main{
         
         
         .carte__btn{
+            width: 100%;
+            height: 25%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
             border-radius: 15px;
             margin: 20px auto;
-            padding: 10px 20px 10px 10px;
+            padding: 0;
             width: 90%;
             background-color: white;
             box-shadow: 5px 5px 5px #ebebeb;
             animation: showMenu 3s ease-in-out forwards;
-            align-items: center;
+            
             
             &:hover > div.check{
                 animation: check .5s linear forwards;  
+                
+            }
+            
+            
+            &:hover > div.check > i{
+                animation: rotateCheck 1s linear forwards;  
+            }
+            
+            &:hover > .titles {
+                width: 60%;
+            }
+            
+            &:hover > .titles > .title-3 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             
             
@@ -186,58 +207,79 @@ main{
             @media screen and (min-width: $tablet-limit) { 
                 width: 100%;
                 height: 25%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 0;
-                
+                align-items: center;
             }
             
             .titles{
-                width: 100%;
-                padding: 20px;
+                width: 80% ;
+                padding: 10px;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
+                white-space: nowrap;
+                
                 
                 .title-3{
                     font-weight: bold;
                     padding-bottom: 5px;
                 }
                 
-                .title-4{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
+                
+                .overflow-clip{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                
+                
+            }
+            .price{
+                font-weight: bold;
+                display: flex;
+                align-self: flex-end;
+                
+                @media screen and (min-width: $tablet-limit) { 
+                    display: table;
+                    height: 100%;
+                }
+                
+                > span{
+                    padding-bottom: 10px;
                     
-                    .price{
-                        font-weight: bold;
-                        
+                    @media screen and (min-width: $tablet-limit) { 
+                        vertical-align: bottom;
+                        display: table-cell;
+                        padding-bottom: 15px;
                     }
                 }
             }
             
             .check{
-                padding: 0px;
+                width: 0%;
                 opacity: 0;
-                width: 0;
                 border-radius: 0 15px 15px 0;
                 background-color: #99e2d0;
-                color: white;    
+                color: white;
+                text-align: center;
+                display: table;
+                @media screen and (min-width: $tablet-limit) { 
+                    height: 100%;
                 }
             }
-
-            i{
-                font-size: large;
-                animation: rotateCheck 1s linear infinite;
-            }
-        }   
-        
-        .book-order-btn{
-            @media screen and (min-width: $tablet-limit) { 
-                margin-top: 30px;
-            }
-            
         }
+        
+        i{
+            font-size: x-large;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }   
+    
+    .book-order-btn{
+        @media screen and (min-width: $tablet-limit) { 
+            margin-top: 30px;
+        }
+        
     }
+}
