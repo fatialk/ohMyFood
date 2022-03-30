@@ -156,10 +156,18 @@ main{
             
         }  
         
-        
+        .carte__entrees{
+            animation: fadein 1s linear forwards;
+        }
+
+        .carte__plats{
+            animation: fadein 3s linear forwards;
+
+        }
         
         .carte__desserts{
             padding-bottom: 20px;
+            animation: fadein 5s linear forwards;
             @media screen and (min-width: $tablet-limit) { 
                 padding-bottom: 0;
                 
@@ -223,6 +231,11 @@ main{
                 .title-3{
                     font-weight: bold;
                     padding-bottom: 5px;
+                    
+                    @media screen and (min-width: $tablet-limit) and (max-width: $desktop-limit){
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                 }
                 
                 

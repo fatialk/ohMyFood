@@ -1,70 +1,80 @@
-// @keyframes custom-loading {
-  //     0% { transform: rotate(0deg);}
-  //     100% { transform: rotate(360deg); }
-  // }
-  
-  @keyframes loader-accueil {
-    0% {
-      transform: rotate(0deg);
-    }
-    80%{
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(720deg);
-      opacity: 0;
-    }
+
+
+@keyframes loader-accueil {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  @keyframes backgroundAll {
-    0% {
-      opacity: 0.3;
-    }
-    80%{
-      opacity:0.3;
-    }
-    100% {
-      opacity: 1;
-    }
+  80%{
+    opacity: 1;
   }
-  
-  @keyframes showMenu {
-    0% {
-      transform: translate3d(0,30px,0);
-    }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes backgroundAll {
+  0% {
+    opacity: 0.3;
+  }
+  80%{
+    opacity:0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// @keyframes showMenu {
+  //   0% {
+    //     transform: translate3d(0,30px,0);
+    //   }
     
-    100% {
-      transform: translate3d(0,0,0);
-    }
-  }
-  
-  @keyframes paintHeart {
-    0%{
-      opacity: 0.3;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes check {
-    0%{
-      width: 0;
-      opacity: 0;
-    }
-    100% {
-      width: 20%;
-      opacity: 1;
-    }
-    
-  }
-  
-  @keyframes rotateCheck {
-    0%{
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(359deg);
-    }
-    
-  }
+    //   100% {
+      //     transform: translate3d(0,0,0);
+      //   }
+      // }
+      
+      @keyframes paintHeart {
+        0%{
+          opacity: 0.3;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes check {
+        0%{
+          width: 0;
+          opacity: 0;
+        }
+        100% {
+          width: 20%;
+          opacity: 1;
+        }
+        
+      }
+      
+      @keyframes rotateCheck {
+        0%{
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(359deg);
+        }
+        
+      }
+      
+      @keyframes fadein {
+        0% {
+          opacity:0;
+        }
+        99%{
+          opacity:0.5;
+        }
+        100%{
+          opacity:1;
+        }
+        
+      }

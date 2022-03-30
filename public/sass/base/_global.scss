@@ -26,8 +26,8 @@ a{
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid red;
-    border-color: red transparent red transparent;
+    border: 6px solid $color-primary;
+    border-color: $color-primary transparent $color-primary transparent;
     animation: loader-accueil 3s linear forwards;
 }
 
@@ -82,7 +82,7 @@ main{
         filter: brightness(1.25);
         
     }
-
+    
     @media screen and (min-width: $tablet-limit) { 
         width: 30%;
     }
@@ -103,14 +103,14 @@ main{
         -webkit-text-fill-color: transparent;
         animation: paintHeart 1s linear forwards;
     }
-
+    
     @media screen and (min-width: $tablet-limit) { 
         margin-left: 32%;
     }
     @media screen and (min-width: $desktop-limit) { 
         margin-left: 33%;
     }
-
+    
     
 }
 
@@ -164,7 +164,7 @@ main{
     }
     
     &__btn{
-        background-color:#f6f6f6;
+        background-color:$background-btn-fonctionnement;
         font-weight: bold;
         border: none;
         border-radius: 15px;
@@ -172,6 +172,23 @@ main{
         padding: 20px 0 20px 0;
         width: 85%;
         box-shadow: 5px 5px 5px #ebebeb;
+        
+        &:hover {
+            filter: saturate(3);
+        }
+        
+        &:hover > i:nth-child(2) {
+        color: $color-primary;
+            
+        }
+
+        &:hover > span {
+            color: $color-primary;
+            
+        }
+        
+        
+        
         @media screen and (min-width: $tablet-limit) { 
             text-align: center;
             width: 25%;
@@ -261,7 +278,7 @@ main{
         border-radius: 20px;
         box-shadow: 5px 5px 5px #e4dadac5;;
         background-color: white;
-
+        
         
         
         @media screen and (min-width: $desktop-limit) {
@@ -312,17 +329,17 @@ main{
         color: #008563;
         background-color: #98e2cf;;
         padding: 5px 10px;
-
+        
         @media screen and (min-width: $tablet-limit) { 
             margin-left: 28%;
             margin-top: 3%;
-        
+            
         }
         @media screen and (min-width: $desktop-limit) { 
             margin-left: 31%;
             margin-top: 2%;
         }
-
+        
         
     }  
 }
