@@ -172,9 +172,10 @@ main{
         padding: 20px 0 20px 0;
         width: 85%;
         box-shadow: 5px 5px 5px #ebebeb;
-        
+        cursor: pointer;
         &:hover {
             filter: saturate(3);
+            
         }
         
         &:hover > i:nth-child(2) {
