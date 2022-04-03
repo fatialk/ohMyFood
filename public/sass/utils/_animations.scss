@@ -1,15 +1,44 @@
 
 
-@keyframes loader-accueil {
+@-webkit-keyframes loader-accueil {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   80%{
     opacity: 1;
   }
   100% {
-    transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
     opacity: 0;
+  }
+}
+
+@keyframes loader-accueil {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  80%{
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes backgroundAll {
+  0% {
+    opacity: 0.3;
+  }
+  80%{
+    opacity:0.3;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -25,13 +54,36 @@
   }
 }
 
-@keyframes showMenu {
+@-webkit-keyframes showMenu {
   0% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes showMenu {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes paintHeart {
+  0%{
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -42,6 +94,18 @@
   100% {
     opacity: 1;
   }
+}
+
+@-webkit-keyframes check {
+  0%{
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 20%;
+    opacity: 1;
+  }
+  
 }
 
 @keyframes check {
@@ -56,12 +120,39 @@
   
 }
 
-@keyframes rotateCheck {
+@-webkit-keyframes rotateCheck {
   0%{
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   100% {
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  
+}
+
+@keyframes rotateCheck {
+  0%{
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity:0;
+  }
+  99%{
+    opacity:0.5;
+  }
+  100%{
+    opacity:1;
   }
   
 }

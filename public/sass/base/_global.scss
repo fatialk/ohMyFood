@@ -1,5 +1,6 @@
 *, ::after, ::before {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -28,30 +29,42 @@ a{
     border-radius: 50%;
     border: 6px solid $color-primary;
     border-color: $color-primary transparent $color-primary transparent;
-    animation: loader-accueil 3s linear forwards;
+    -webkit-animation: loader-accueil 3s linear forwards;
+            animation: loader-accueil 3s linear forwards;
 }
 
 body{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 100%;
     height: 100%;
     font-family: "Roboto", serif;
     font-size: 14px;
     letter-spacing: .5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     
 }
 
 header{
     padding: 20px 0 20px 0;
     &.home{
-        animation: backgroundAll 3s linear forwards;
+        -webkit-animation: backgroundAll 3s linear forwards;
+                animation: backgroundAll 3s linear forwards;
     }
     
     .logo{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         
         
         
@@ -62,11 +75,14 @@ header{
 }
 main{ 
     &.home{
-        animation: backgroundAll 3s linear forwards;
+        -webkit-animation: backgroundAll 3s linear forwards;
+                animation: backgroundAll 3s linear forwards;
     }
 }
 
 .book-order-btn{
+    background: -webkit-gradient(linear, left top, left bottom, from($color-secondary), to($color-primary));
+    background: -o-linear-gradient($color-secondary, $color-primary);
     background: linear-gradient($color-secondary, $color-primary);
     color: white;
     border: none;
@@ -75,11 +91,13 @@ main{
     margin: 20px auto;
     padding: 20px;
     width: 52%;
-    box-shadow: 5px 5px 5px #c9c9c9;
+    -webkit-box-shadow: 5px 5px 5px #c9c9c9;
+            box-shadow: 5px 5px 5px #c9c9c9;
     position: relative;
     margin: 0 auto;
     &:hover{
-        filter: brightness(1.25);
+        -webkit-filter: brightness(1.25);
+                filter: brightness(1.25);
         
     }
     
@@ -101,7 +119,8 @@ main{
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: paintHeart 1s linear forwards;
+        -webkit-animation: paintHeart 1s linear forwards;
+                animation: paintHeart 1s linear forwards;
     }
     
     @media screen and (min-width: $tablet-limit) { 
@@ -116,11 +135,16 @@ main{
 
 
 .localisation{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 16px;
     background-color: #ebebeb;
-    box-shadow: 0px -4px 2px #cfcfcf;
+    -webkit-box-shadow: 0px -4px 2px #cfcfcf;
+            box-shadow: 0px -4px 2px #cfcfcf;
     padding: 20px 0;
     
     span{ 
@@ -171,10 +195,12 @@ main{
         margin: 20px auto;
         padding: 20px 0 20px 0;
         width: 85%;
-        box-shadow: 5px 5px 5px #ebebeb;
+        -webkit-box-shadow: 5px 5px 5px #ebebeb;
+                box-shadow: 5px 5px 5px #ebebeb;
         cursor: pointer;
         &:hover {
-            filter: saturate(3);
+            -webkit-filter: saturate(3);
+                    filter: saturate(3);
             
         }
         
@@ -234,8 +260,13 @@ main{
     
     > div{
         @media screen and (min-width: $tablet-limit) { 
+            display: -webkit-box; 
+            display: -ms-flexbox; 
             display: flex;
-            flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
         }
     }     
 }
@@ -258,10 +289,18 @@ main{
         }
         
         @media screen and (min-width: $tablet-limit) { 
+            display: -webkit-box; 
+            display: -ms-flexbox; 
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
             height: 90%;
         }
     }
@@ -277,7 +316,8 @@ main{
         margin: auto;
         margin-bottom: 20px;
         border-radius: 20px;
-        box-shadow: 5px 5px 5px #e4dadac5;;
+        -webkit-box-shadow: 5px 5px 5px #e4dadac5;
+                box-shadow: 5px 5px 5px #e4dadac5;;
         background-color: white;
         
         
@@ -303,17 +343,29 @@ main{
         &__info{
             width: 100%;
             height: 25%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             padding: 5px 20px 0 20px;
             font-size: 16px;
         }
         
         span:nth-child(1){
             font-weight: bold;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             @media screen and (min-width: 576px) {               
             }
             
@@ -347,15 +399,23 @@ main{
 
 footer{
     height: 200px ;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding-left: 20px;
     background-color: black;
     
     .logo-footer__img{
         width:30%;
-        filter: invert(1);
+        -webkit-filter: invert(1);
+                filter: invert(1);
     }
     
     a, .logo-footer__img{

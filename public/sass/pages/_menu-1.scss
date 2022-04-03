@@ -5,8 +5,12 @@
     }
     
     .logo{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         @media screen and (min-width: $tablet-limit) {
             display: block;
             padding: 30px;
@@ -80,7 +84,8 @@ main{
     background-color: #f5f5f5;
     position: relative;
     bottom: 45px;
-    animation: showmenu 1s linear forwards;
+    -webkit-animation: showmenu 1s linear forwards;
+            animation: showmenu 1s linear forwards;
     
     @media screen and (min-width: $tablet-limit) { 
         border-radius: 0;
@@ -94,8 +99,12 @@ main{
     .title-1{
         padding: 0 40px 20px 20px;
         font-family: "Shrikhand", serif;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between; 
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; 
         font-size: 25px;
         @media screen and (min-width: $tablet-limit) { 
             width: 50%;
@@ -103,7 +112,8 @@ main{
             padding: 20px 20px 20px 20px;
             border-top: none;
             border-radius: 0 0 35px 35px;
-            box-shadow: 5px 5px 5px #ebebeb;
+            -webkit-box-shadow: 5px 5px 5px #ebebeb;
+                    box-shadow: 5px 5px 5px #ebebeb;
             background-color: white;
             
             
@@ -122,9 +132,16 @@ main{
     > div{
         
         @media screen and (min-width: $tablet-limit) { 
+            display: -webkit-box; 
+            display: -ms-flexbox; 
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: space-evenly;
+                -ms-flex-pack: space-evenly;
+                    justify-content: space-evenly;
             margin-top: 20px;
             padding-top: 20px;
         }
@@ -158,17 +175,20 @@ main{
         }  
         
         .carte__entrees{
-            animation: fadein 1s linear forwards;
+            -webkit-animation: fadein 1s linear forwards;
+                    animation: fadein 1s linear forwards;
         }
 
         .carte__plats{
-            animation: fadein 2s linear forwards;
+            -webkit-animation: fadein 2s linear forwards;
+                    animation: fadein 2s linear forwards;
 
         }
         
         .carte__desserts{
             padding-bottom: 20px;
-            animation: fadein 3s linear forwards;
+            -webkit-animation: fadein 3s linear forwards;
+                    animation: fadein 3s linear forwards;
             @media screen and (min-width: $tablet-limit) { 
                 padding-bottom: 0;
                 
@@ -179,26 +199,37 @@ main{
         .carte__btn{
             width: 100%;
             height: 25%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             border-radius: 15px;
             margin: 20px auto;
             padding: 0;
             width: 90%;
             background-color: white;
-            box-shadow: 5px 5px 5px #ebebeb;
-            animation: showMenu 3s ease-in-out forwards;
+            -webkit-box-shadow: 5px 5px 5px #ebebeb;
+                    box-shadow: 5px 5px 5px #ebebeb;
+            -webkit-animation: showMenu 3s ease-in-out forwards;
+                    animation: showMenu 3s ease-in-out forwards;
             
             
             &:hover > div.check{
-                animation: check .5s linear forwards;  
+                -webkit-animation: check .5s linear forwards;
+                        animation: check .5s linear forwards;  
                 
             }
             
             
             &:hover > div.check > i{
-                animation: rotateCheck 1s linear forwards;  
+                -webkit-animation: rotateCheck 1s linear forwards;
+                        animation: rotateCheck 1s linear forwards;  
             }
             
             &:hover > .titles {
@@ -208,7 +239,8 @@ main{
             &:hover > .titles > .title-3 {
                 white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
             }
             
             
@@ -216,16 +248,25 @@ main{
             @media screen and (min-width: $tablet-limit) { 
                 width: 100%;
                 height: 25%;
-                align-items: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
             }
             
             .titles{
                 width: 80% ;
                 padding: 10px;
                 height: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-pack: space-evenly;
+                    -ms-flex-pack: space-evenly;
+                        justify-content: space-evenly;
                 white-space: nowrap;
                 
                 
@@ -235,7 +276,8 @@ main{
                     
                     @media screen and (min-width: $tablet-limit) and (max-width: $desktop-limit){
                         overflow: hidden;
-                        text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                           text-overflow: ellipsis;
                     }
                 }
                 
@@ -243,15 +285,19 @@ main{
                 .overflow-clip{
                     white-space: nowrap;
                     overflow: hidden;
-                    text-overflow: ellipsis;
+                    -o-text-overflow: ellipsis;
+                       text-overflow: ellipsis;
                 }
                 
                 
             }
             .price{
                 font-weight: bold;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                align-self: flex-end;
+                -ms-flex-item-align: end;
+                    align-self: flex-end;
                 
                 @media screen and (min-width: $tablet-limit) { 
                     display: table;
