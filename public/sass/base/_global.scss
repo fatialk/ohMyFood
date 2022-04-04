@@ -127,7 +127,7 @@ main{
         margin-left: 32%;
     }
     @media screen and (min-width: $desktop-limit) { 
-        margin-left: 33%;
+        margin-left: 15%;
     }
     
     
@@ -278,6 +278,10 @@ main{
     @media screen and (min-width: $tablet-limit) { 
         height: 820px;
     }
+
+    @media screen and (min-width: $desktop-limit) {
+        height: auto;
+    }
     
     > div{
         width: 100%;
@@ -285,6 +289,10 @@ main{
         > a{
             @media screen and (min-width: $tablet-limit) {
                 width: 40%;
+            }
+
+            @media screen and (min-width: $desktop-limit) {
+                width: 20%;
             }
         }
         
@@ -302,6 +310,10 @@ main{
                 -ms-flex-pack: space-evenly;
                     justify-content: space-evenly;
             height: 90%;
+        }
+
+        @media screen and (min-width: $desktop-limit) {
+            flex-wrap: nowrap;
         }
     }
     
@@ -389,7 +401,7 @@ main{
             
         }
         @media screen and (min-width: $desktop-limit) { 
-            margin-left: 31%;
+            margin-left: 13%;
             margin-top: 2%;
         }
         

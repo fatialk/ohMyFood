@@ -248,6 +248,12 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .menu-image img {
+    width: 40%;
+  }
+}
+
 main {
   background-color: #f5f5f5;
 }
@@ -291,6 +297,12 @@ main {
     -webkit-box-shadow: 5px 5px 5px #ebebeb;
     box-shadow: 5px 5px 5px #ebebeb;
     background-color: white;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carte .title-1 {
+    width: 40%;
   }
 }
 
@@ -649,7 +661,7 @@ main.home {
 
 @media screen and (min-width: 992px) {
   .fa-heart {
-    margin-left: 33%;
+    margin-left: 15%;
   }
 }
 
@@ -806,6 +818,12 @@ main.home {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .restaurants {
+    height: auto;
+  }
+}
+
 .restaurants > div {
   width: 100%;
   height: 100%;
@@ -814,6 +832,12 @@ main.home {
 @media screen and (min-width: 426px) {
   .restaurants > div > a {
     width: 40%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .restaurants > div > a {
+    width: 20%;
   }
 }
 
@@ -832,6 +856,13 @@ main.home {
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     height: 90%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .restaurants > div {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -919,7 +950,7 @@ main.home {
 
 @media screen and (min-width: 992px) {
   .restaurants .nouveau {
-    margin-left: 31%;
+    margin-left: 13%;
     margin-top: 2%;
   }
 }
