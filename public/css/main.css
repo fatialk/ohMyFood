@@ -614,15 +614,17 @@ main.home {
   margin: 20px auto;
   padding: 20px;
   width: 52%;
-  -webkit-box-shadow: 5px 5px 5px #c9c9c9;
-  box-shadow: 5px 5px 5px #c9c9c9;
   position: relative;
   margin: 0 auto;
+  -webkit-box-shadow: 5px 5px 5px #c9c9c9;
+  box-shadow: 5px 5px 5px #c9c9c9;
+  cursor: pointer;
 }
 
 .book-order-btn:hover {
-  -webkit-filter: brightness(1.25);
-  filter: brightness(1.25);
+  opacity: 0.8;
+  -webkit-box-shadow: 8px 8px 8px #aca8a8;
+  box-shadow: 8px 8px 8px #aca8a8;
 }
 
 @media screen and (min-width: 426px) {
@@ -677,10 +679,27 @@ main.home {
   -webkit-box-shadow: 0px -4px 2px #cfcfcf;
   box-shadow: 0px -4px 2px #cfcfcf;
   padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.localisation span {
-  padding-left: 20px;
+.localisation i {
+  margin: -6px 10px 0px 0px;
+}
+
+.localisation input {
+  width: 130px;
+  padding: 10px;
+  overflow: visible;
+  border: none;
+  background: transparent;
+  color: black;
+}
+
+.localisation input:focus {
+  outline-color: #ccc;
+  background-color: white;
 }
 
 .reservation {
@@ -729,19 +748,14 @@ main.home {
 }
 
 .fonctionnement__btn:hover {
-  -webkit-filter: saturate(3);
-  filter: saturate(3);
+  background-color: #f5edff;
 }
 
 .fonctionnement__btn:hover > i:nth-child(2) {
   color: #9356DC;
 }
 
-.fonctionnement__btn:hover > span {
-  color: #9356DC;
-}
-
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 992px) {
   .fonctionnement__btn {
     text-align: center;
     width: 25%;
@@ -759,7 +773,7 @@ main.home {
   font-size: small;
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 992px) {
   .fonctionnement__btn i:nth-child(1) {
     position: relative;
     bottom: 13px;
@@ -769,10 +783,11 @@ main.home {
 
 .fonctionnement__btn i:nth-child(2) {
   margin: 0 20px 0 10px;
+  font-size: 16px;
   color: grey;
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 992px) {
   .fonctionnement__btn i:nth-child(2) {
     margin-bottom: 10px;
   }
@@ -788,13 +803,7 @@ main.home {
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 992px) {
-  .fonctionnement__btn span {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 992px) {
   .fonctionnement > div {
     display: -webkit-box;
     display: -ms-flexbox;
